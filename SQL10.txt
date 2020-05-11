@@ -1,0 +1,117 @@
+信息系统与数据库技术练习10答题卡
+
+班级：     计算机信息管理一班
+姓名：     陈正阳
+学号：     20190307139
+
+注：请将答案放置在序号下方。*/
+
+（一）
+1.
+USE Project
+2
+.SELECT Ename,WorkDate,Esex
+FROM Employee
+WHERE Did='D001'
+ORDR BY WorkDate DESC
+3.
+SELECT *
+FROM Employee
+ORDER BY Did DESC,BasePay ASC
+4.
+SELECT Dia,Ename,WorkDate,Esex,BasePay,
+FROM Employee
+WHERE YEAR(WorkDate)>=2000
+ORDER BY Did ASC,WorkDate DESC
+5.
+SELECT MAX(Wages)AS最高报酬，MIN(Wages)最低报酬,
+SUM(Wages)AS总报酬，AVG(Wages)AS平均报酬
+FROM EP
+6.
+SELECT CLUNT(*)AS记录数，COUNT(DISTINCT Pid)AS项目数
+FROM EP
+7、在EP表中查询A002项目（项目号Pid为A002）报酬(Wages)的总和、最小值。要求分别显示别名为总报酬和最低报酬。
+SELECT SUM（Wages）AS总报酬，MIN（Wages）AS最低报酬
+FROM EP
+WHERE Pid='A002'
+8、在Employee表中查询基本工资(BasePay)大于等于9700的全部字段，并将所得结果保存到表GGZ中。
+SELECT *INTO GGZ
+FROM Employee
+WHERE BasePay>=9700
+9、查询Employee表所有男员工(性别ESex为1)的雇员号(Eid)、姓名(Ename)、性别(Esex)，并将结果存入临时表MenE。
+SELECT EIid,Ename,Esex#MenE
+FROM Employee
+WHERE ESex=1
+10、使用合并查询UNION，合并查询1和查询2的结果,要求删除重复记录。
+查询1：Employee表中查询D002部门（部门号Did为D002）的部门号(Did)
+、姓名(Ename)、性别(Esex)、津贴(Bonus)。
+查询2：Employee表中查询女
+员工(性别Esex为0)的部门号(Did)、姓名(Ename)、性别(Esex)、津贴(Bonus)
+SELECT Did,Ename,Esex,Bonus
+FROM Employee
+WHERE Did='D002'
+UNION
+SELECT Did,Ename,Esex,Bonus
+FROM Employee
+WHERE Esex='女'
+1.
+2.
+3.
+4.
+5.
+6.
+7.
+8
+..
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.222
+
+
+320
+32
+3
+
+32
+1
+10
+210
+1
+210
+210
+21
+21
+21
+21
+
+.
+.
+.
+.
